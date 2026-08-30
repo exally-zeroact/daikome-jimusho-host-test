@@ -1,0 +1,20 @@
+# ★事務所の 入口の 見張り★
+#   ここは rewrite だけの 入口です。★向き先を 取り違えると 黙って 別の物を 見せます★ので、
+#   push と PR の たびに 機械で 見ます。
+name: test
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  muki-saki:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm install --no-audit --no-fund
+      - run: npx vitest run --globals

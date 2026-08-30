@@ -1,0 +1,12 @@
+{
+  "name": "daikome-jimusho-host-test",
+  "private": true,
+  "version": "1.0.0",
+  "description": "ダイコメ 事務所の 入口（rewrite だけ・画面は 持たない）",
+  "scripts": {
+    "test": "vitest run --globals"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.6"
+  }
+}

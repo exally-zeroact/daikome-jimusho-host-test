@@ -1,0 +1,88 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "https://daikou-app-test.vercel.app/office/dashboard.html"
+    },
+    {
+      "source": "/dashboard.html",
+      "destination": "https://daikou-app-test.vercel.app/office/dashboard.html"
+    },
+    {
+      "source": "/icon-192.png",
+      "destination": "https://daikou-app-test.vercel.app/icon-192.png"
+    },
+    {
+      "source": "/icon-512.png",
+      "destination": "https://daikou-app-test.vercel.app/icon-512.png"
+    },
+    {
+      "source": "/js/car-name.js",
+      "destination": "https://daikou-app-test.vercel.app/js/car-name.js"
+    },
+    {
+      "source": "/js/daiko-payroll.js",
+      "destination": "https://daikou-app-test.vercel.app/js/daiko-payroll.js"
+    },
+    {
+      "source": "/js/dk-config.js",
+      "destination": "https://daikou-app-test.vercel.app/js/dk-config.js"
+    },
+    {
+      "source": "/js/dk-env-badge.js",
+      "destination": "https://daikou-app-test.vercel.app/js/dk-env-badge.js"
+    },
+    {
+      "source": "/js/dk-session.js",
+      "destination": "https://daikou-app-test.vercel.app/js/dk-session.js"
+    },
+    {
+      "source": "/js/getsuji-agg.js",
+      "destination": "https://daikou-app-test.vercel.app/js/getsuji-agg.js"
+    },
+    {
+      "source": "/js/payroll-daily.js",
+      "destination": "https://daikou-app-test.vercel.app/js/payroll-daily.js"
+    },
+    {
+      "source": "/js/payroll-period.js",
+      "destination": "https://daikou-app-test.vercel.app/js/payroll-period.js"
+    },
+    {
+      "source": "/js/qrcode.min.js",
+      "destination": "https://daikou-app-test.vercel.app/js/qrcode.min.js"
+    },
+    {
+      "source": "/js/uriage-agg.js",
+      "destination": "https://daikou-app-test.vercel.app/js/uriage-agg.js"
+    },
+    {
+      "source": "/kyuryo.html",
+      "destination": "https://daikou-app-test.vercel.app/office/kyuryo.html"
+    },
+    {
+      "source": "/login.html",
+      "destination": "https://daikou-app-test.vercel.app/login.html"
+    },
+    {
+      "source": "/office-manifest.json",
+      "destination": "https://daikou-app-test.vercel.app/office-manifest.json"
+    },
+    {
+      "source": "/shukei.html",
+      "destination": "https://daikou-app-test.vercel.app/office/shukei.html"
+    },
+    {
+      "source": "/uriage.html",
+      "destination": "https://daikou-app-test.vercel.app/office/uriage.html"
+    },
+    {
+      "source": "/vendor/html2canvas.min.js",
+      "destination": "https://daikou-app-test.vercel.app/vendor/html2canvas.min.js"
+    },
+    {
+      "source": "/vendor/jspdf.umd.min.js",
+      "destination": "https://daikou-app-test.vercel.app/vendor/jspdf.umd.min.js"
+    }
+  ]
+}
