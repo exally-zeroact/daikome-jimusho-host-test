@@ -16,7 +16,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
-const VJ = path.join(ROOT, 'vercel.json');
+const VJ = path.join(ROOT, 'office-host', 'vercel.json');
 
 // ★この repo が どちら側か★（名前では なく この行で 決める）
 const KOCHIRA = 'https://daikou-app-test.vercel.app';
@@ -50,7 +50,7 @@ describe('★事務所の 入口の 向き先★', () => {
   it('★④ 画面を 持っていない（入口だけ）★', () => {
     // ★ここに html/js を 置くと、メーター側と 二重に なって 食い違います★
     const warui = fs
-      .readdirSync(ROOT)
+      .readdirSync(path.join(ROOT, 'office-host'))
       .filter((f) => /\.(html|js)$/.test(f) && f !== 'vercel.json');
     expect(warui, '★画面や js を 置いています（入口だけに してください）★').toEqual([]);
   });
@@ -71,5 +71,16 @@ describe('★事務所の 入口の 向き先★', () => {
     Object.keys(d).forEach((k) => {
       expect(YURUSU.has(k), '★"' + k + '" は Vercel が 知らないキー★').toBe(true);
     });
+  });
+
+  it('★★⑥ vercel.json は office-host の 中に ある★★', () => {
+    // root-place
+    // ★Vercel の Root Directory が "office-host" に 設定されて います★（2026-08-31 実測）
+    // ⇒ 根に 置き直すと ★Vercel が 見つけられず 配信が 死にます★
+    expect(fs.existsSync(VJ), '★office-host/vercel.json が ありません★').toBe(true);
+    expect(
+      fs.existsSync(path.join(ROOT, 'vercel.json')),
+      '★根にも vercel.json が あります（どちらが 効くか 分からない）★'
+    ).toBe(false);
   });
 });

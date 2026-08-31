@@ -42,3 +42,19 @@
 
 この `vercel.json` は `Daikou-app-test` の `office-host/vercel.json` から 持ってきました。
 **中身は 1文字も 変えていません**（2026-08-31 時点でバイト一致）。
+
+## ★なぜ `office-host/` の 中に 置いているか★（2026-08-31 実測）
+
+Vercel の この案件は **Root Directory = `office-host`** に 設定されています。
+
+```
+$ vercel project inspect daikome-jimusho
+    Root Directory		office-host
+```
+
+⇒ `vercel.json` を **repo の 根に 置くと Vercel が 見つけられません**（配信が 死にます）。
+⇒ なので **元と 同じ `office-host/vercel.json`** の ままに してあります。
+★管理画面の 設定を 1つも 触らずに 差し替えられる★のが 狙いです。
+
+`tests/muki-saki.test.js` の ⑥が これを 見張っています
+（★根に 置き直す★／★office-host ごと 消す★の 両方で 赤に なる事を 実測済み）。
