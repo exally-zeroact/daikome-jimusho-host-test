@@ -28,7 +28,7 @@ describe('★事務所の 入口の 向き先★', () => {
 
   it('★① 形が 壊れていない（JSON として 読める）★', () => {
     expect(Array.isArray(d.rewrites), '★rewrites が ありません★').toBe(true);
-    expect(d.rewrites.length, '★rewrites が 減っています★').toBeGreaterThanOrEqual(23);
+    expect(d.rewrites.length, '★rewrites が 減っています★').toBeGreaterThanOrEqual(24);
   });
 
   it('★★② 行き先が 全部 テストのメーター★★', () => {
@@ -44,7 +44,7 @@ describe('★事務所の 入口の 向き先★', () => {
     const zenbu = (raw.match(/https:\/\/daikou-app[a-z-]*\.vercel\.app/g) || []);
     const honban = zenbu.filter((u) => u.indexOf('-test') < 0);
     expect(honban, '★本番の URL が 混ざっています★').toEqual([]);
-    expect(zenbu.length, '★行き先が ありません★').toBeGreaterThanOrEqual(23);
+    expect(zenbu.length, '★行き先が ありません★').toBeGreaterThanOrEqual(24);
   });
 
   it('★④ 画面を 持っていない（入口だけ）★', () => {
