@@ -58,3 +58,5 @@ $ vercel project inspect daikome-jimusho
 
 `tests/muki-saki.test.js` の ⑥が これを 見張っています
 （★根に 置き直す★／★office-host ごと 消す★の 両方で 赤に なる事を 実測済み）。
+
+<!-- つなぎ替え 確認 2026-08-31 -->
