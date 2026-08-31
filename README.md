@@ -60,3 +60,5 @@ $ vercel project inspect daikome-jimusho
 （★根に 置き直す★／★office-host ごと 消す★の 両方で 赤に なる事を 実測済み）。
 
 <!-- つなぎ替え 確認 2026-08-31 -->
+
+<!-- installCommand を 既定に 戻した 確認 2026-08-31 -->
